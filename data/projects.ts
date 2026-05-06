@@ -22,6 +22,8 @@ export const projects: Project[] = [
     period: "2025.04 ~ 2025.05",
     team: "1명",
     status: "active",
+    github: "https://google.com",
+    deploy: "https://google.com",
     stack: ["TypeScript", "Next.js", "Tailwind CSS", "Supabase"],
     content: `## 왜 이 기술들을 선택했는가
 
@@ -65,6 +67,8 @@ const useHydration = <T,>(useStore: UseBoundStore<StoreApi<T>>) => {
     period: "2025.04 ~ 2025.05",
     team: "1명",
     status: "active",
+    github: "https://google.com",
+    deploy: "https://google.com",
     stack: ["TypeScript", "Next.js", "Tailwind CSS", "Supabase"],
     content: `## 왜 이 기술들을 선택했는가
 

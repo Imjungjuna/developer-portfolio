@@ -9,17 +9,17 @@ export function SkillCard({ category }: { category: SkillCategory }) {
         <p className="text-sm text-muted-foreground">{category.subtitle}</p>
       </CardHeader>
       <CardContent>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="w-fit md:w-full flex flex-row gap-2 sm:gap-3 mx-auto">
           {category.skills.map((skill) => (
             <div
               key={skill.name}
-              className="flex aspect-square items-center justify-center rounded-lg border border-dashed transition-colors hover:bg-muted"
+              className="flex items-center justify-center rounded-lg border border-dashed p-3 sm:aspect-square sm:p-0 transition-colors hover:bg-muted"
               title={skill.name}
             >
               <svg
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                className="h-6 w-6"
+                className="size-6"
                 aria-label={skill.name}
               >
                 <path d={skill.svgPath} />

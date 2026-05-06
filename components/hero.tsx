@@ -1,4 +1,3 @@
-import { Badge } from "@/components/ui/badge";
 import { Mail } from "lucide-react";
 
 export function Hero() {
@@ -32,22 +31,13 @@ export function Hero() {
         </div>
       </dl>
 
-      <div className="mt-8 flex items-center gap-3">
-        <Badge variant="secondary" className="gap-1.5">
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
-          </span>
-          Available for work
-        </Badge>
-        <a
-          href="mailto:dalbichi9801@gmail.com"
-          className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
-        >
-          <Mail className="h-4 w-4" />
-          dalbichi9801@gmail.com
-        </a>
-      </div>
+      <a
+        href="mailto:dalbichi9801@gmail.com"
+        className="mt-8 inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
+      >
+        <Mail className="h-4 w-4" />
+        dalbichi9801@gmail.com
+      </a>
     </section>
   );
 }
