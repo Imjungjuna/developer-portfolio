@@ -11,7 +11,7 @@ const quickLinks = [
 
 export function Footer() {
   return (
-    <footer className="mx-auto w-full max-w-3xl px-6 pb-8">
+    <footer className="mx-auto w-full max-w-4xl px-6 pb-8">
       <Separator />
       <div className="flex flex-col gap-6 pt-8 sm:flex-row sm:items-center sm:justify-between">
         <div>

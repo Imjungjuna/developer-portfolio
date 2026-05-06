@@ -126,7 +126,7 @@ export default async function ProjectPage({
   const contentElements = await renderMarkdown(project.content);
 
   return (
-    <main className="mx-auto w-full max-w-3xl px-6 py-16">
+    <main className="mx-auto w-full max-w-4xl px-6 py-16">
       <Link
         href="/#projects"
         className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"

@@ -12,9 +12,9 @@ const navItems = [
 export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-sm">
-      <div className="mx-auto flex h-14 max-w-3xl items-center justify-between px-6">
-        <a href="#" className="text-lg font-bold">
-          임정준
+      <div className="mx-auto flex h-14 max-w-4xl items-center justify-between px-6">
+        <a href="#" className="text-xl" aria-label="홈">
+          🦊
         </a>
         <div className="flex items-center gap-1">
           <nav className="hidden md:flex items-center gap-6">

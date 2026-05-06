@@ -20,7 +20,7 @@ export function Hero() {
       <dl className="mt-8 grid grid-cols-2 gap-4 text-sm sm:grid-cols-3">
         <div>
           <dt className="text-muted-foreground">생년월일</dt>
-          <dd className="mt-1 font-medium">1998.01.01</dd>
+          <dd className="mt-1 font-medium">2004.09.09</dd>
         </div>
         <div>
           <dt className="text-muted-foreground">전화번호</dt>
@@ -28,7 +28,7 @@ export function Hero() {
         </div>
         <div>
           <dt className="text-muted-foreground">위치</dt>
-          <dd className="mt-1 font-medium">서울</dd>
+          <dd className="mt-1 font-medium">성남시 분당구</dd>
         </div>
       </dl>
 

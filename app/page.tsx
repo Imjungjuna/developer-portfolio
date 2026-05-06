@@ -6,7 +6,7 @@ import { Contact } from "@/components/contact";
 
 export default function Home() {
   return (
-    <main className="mx-auto w-full max-w-3xl px-6">
+    <main className="mx-auto w-full max-w-4xl px-6">
       <Hero />
       <Education />
       <Projects />

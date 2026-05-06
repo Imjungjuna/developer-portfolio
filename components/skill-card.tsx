@@ -13,19 +13,17 @@ export function SkillCard({ category }: { category: SkillCategory }) {
           {category.skills.map((skill) => (
             <div
               key={skill.name}
-              className="flex items-center gap-2 rounded-lg border border-dashed p-3 text-sm transition-colors hover:bg-muted"
+              className="flex aspect-square items-center justify-center rounded-lg border border-dashed transition-colors hover:bg-muted"
+              title={skill.name}
             >
-              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-muted">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="h-4 w-4"
-                  aria-hidden="true"
-                >
-                  <path d={skill.svgPath} />
-                </svg>
-              </div>
-              {skill.name}
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="h-6 w-6"
+                aria-label={skill.name}
+              >
+                <path d={skill.svgPath} />
+              </svg>
             </div>
           ))}
         </div>
