@@ -1,10 +1,11 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Phone, Mail, GitFork } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
+import { GithubIcon } from "@/components/icons";
 
 const contacts = [
   { icon: Phone, label: "전화번호", value: "010.4740.3604" },
   { icon: Mail, label: "이메일", value: "dalbichi9801@gmail.com", href: "mailto:dalbichi9801@gmail.com" },
-  { icon: GitFork, label: "GitHub", value: "@imjungjuna", href: "https://github.com/Imjungjuna" },
+  { icon: GithubIcon, label: "GitHub", value: "@imjungjuna", href: "https://github.com/Imjungjuna" },
 ];
 
 export function Contact() {

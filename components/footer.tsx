@@ -1,5 +1,6 @@
 import { Separator } from "@/components/ui/separator";
-import { GitFork, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
+import { GithubIcon } from "@/components/icons";
 
 const quickLinks = [
   { label: "About", href: "#hero" },
@@ -30,7 +31,7 @@ export function Footer() {
         <div className="flex gap-3">
           <a href="https://github.com/Imjungjuna" target="_blank" rel="noopener noreferrer"
              className="text-muted-foreground hover:text-foreground transition-colors">
-            <GitFork className="h-5 w-5" />
+            <GithubIcon className="h-5 w-5" />
           </a>
           <a href="mailto:dalbichi9801@gmail.com"
              className="text-muted-foreground hover:text-foreground transition-colors">

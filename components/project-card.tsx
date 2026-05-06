@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { GitFork, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import { GithubIcon } from "@/components/icons";
 import type { Project } from "@/data/projects";
 
 export function ProjectCard({ project }: { project: Project }) {
@@ -37,7 +38,7 @@ export function ProjectCard({ project }: { project: Project }) {
             <a href={project.github} target="_blank" rel="noopener noreferrer"
                className="text-muted-foreground hover:text-foreground transition-colors"
                onClick={(e) => e.stopPropagation()}>
-              <GitFork className="h-4 w-4" />
+              <GithubIcon className="h-4 w-4" />
             </a>
           )}
           {project.deploy && (
