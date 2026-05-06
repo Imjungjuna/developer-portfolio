@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -30,7 +31,8 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          {children}
+          <div className="flex-1">{children}</div>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
