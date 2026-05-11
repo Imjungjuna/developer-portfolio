@@ -90,7 +90,7 @@ export function ProjectCard({
 
   if (videoMode === "mobile") {
     return (
-      <Card className="group overflow-hidden transition-all hover:border-primary/50 hover:shadow-lg">
+      <Card className="group overflow-hidden py-0 transition-all hover:border-primary/50 hover:shadow-lg">
         <div className="flex">
           <div className="flex flex-1 flex-col justify-center min-w-0">
             <Link href={`/project/${project.id}`} className="block">
