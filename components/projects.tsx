@@ -27,7 +27,7 @@ export function Projects() {
     <section id="projects" className="py-16">
       <div className="flex items-center justify-between">
         <SectionLabel>Projects</SectionLabel>
-        <div role="group" aria-label="Video display mode" className="flex items-center gap-1">
+        <div role="group" aria-label="Video display mode" className="hidden sm:flex items-center gap-1">
           {VIDEO_MODES.map(({ mode, icon: Icon, label }) => (
             <button
               key={mode}
