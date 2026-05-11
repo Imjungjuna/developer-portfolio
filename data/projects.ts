@@ -10,6 +10,8 @@ export type Project = {
   github?: string;
   deploy?: string;
   image?: string;
+  videoDesktop?: string;
+  videoMobile?: string;
   content: string;
 };
 
@@ -18,12 +20,13 @@ export const projects: Project[] = [
     id: "yundo-ceramics",
     title: "Yundo Ceramics",
     subtitle: "한/영 다국어 도자기 이커머스, 풀 프론트엔드 프로젝트",
-    description: "한국 전통 도자기 D2C 웹사이트. 다국어·결제·장바구니까지 프론트엔드 단독 구축",
+    description:
+      "한국 전통 도자기 D2C 웹사이트. 다국어·결제·장바구니까지 프론트엔드 단독 구축",
     period: "2025.04 ~ 2025.05",
     team: "1명",
     status: "active",
-    github: "https://google.com",
-    deploy: "https://google.com",
+    github: "https://github.com/Imjungjuna/portfolio-D2C-commerce-site",
+    deploy: "https://yundo-ceramics.vercel.app/",
     stack: ["TypeScript", "Next.js", "Tailwind CSS", "Supabase"],
     content: `## 왜 이 기술들을 선택했는가
 
@@ -63,12 +66,13 @@ const useHydration = <T,>(useStore: UseBoundStore<StoreApi<T>>) => {
     id: "cns-fatigue-tracker",
     title: "CNS Fatigue Tracker",
     subtitle: "운동인을 위한 CNS 피로도 측정·관리, 웹 애플리케이션",
-    description: "수면·컨디션·운동 부하 데이터 기반 피로도 산출. 도메인 로직 직접 설계 + Server Actions 실전 적용",
-    period: "2025.04 ~ 2025.05",
+    description:
+      "수면·컨디션·운동 부하 데이터 기반 피로도 산출. 도메인 로직 직접 설계 + Server Actions 실전 적용",
+    period: "2026.02 ~ 2025.04",
     team: "1명",
     status: "active",
-    github: "https://google.com",
-    deploy: "https://google.com",
+    github: "https://github.com/Imjungjuna/my-personal-tracker",
+    deploy: "https://jungjun-personal-tracker.vercel.app/",
     stack: ["TypeScript", "Next.js", "Tailwind CSS", "Supabase"],
     content: `## 왜 이 기술들을 선택했는가
 
@@ -110,7 +114,8 @@ function calculateFatigueScore(input: FatigueInput): number {
     id: "comit-promotion",
     title: "교내 동아리 홍보 사이트",
     subtitle: "코딩동아리 신규모집 홍보용, 정적 웹사이트 개발",
-    description: "동아리 홍보·네트워킹 사이트. 디자인 시행착오를 빠르게 반영하기 위해 Next.js + Tailwind 선택",
+    description:
+      "동아리 홍보·네트워킹 사이트. 디자인 시행착오를 빠르게 반영하기 위해 Next.js + Tailwind 선택",
     period: "2025.02 ~ 2025.03",
     team: "1명",
     status: "active",
@@ -136,7 +141,8 @@ function calculateFatigueScore(input: FatigueInput): number {
     id: "cams",
     title: "CAMS",
     subtitle: "대학교 코딩동아리 활동관리, 웹 프론트엔드 개발 (5인 팀 협업)",
-    description: "첫 팀 협업 프로젝트. 스키마 설계부터 참여하며 협업 프로세스와 의사결정을 경험",
+    description:
+      "첫 팀 협업 프로젝트. 스키마 설계부터 참여하며 협업 프로세스와 의사결정을 경험",
     period: "2024.06 ~ 2025.05",
     team: "5명 (FE 2, BE 2, INFRA 1)",
     status: "active",
