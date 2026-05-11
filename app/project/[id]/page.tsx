@@ -56,7 +56,7 @@ async function renderMarkdown(content: string) {
           key={key++}
           className="my-4 overflow-x-auto rounded-lg border text-sm [&_pre]:p-4"
           dangerouslySetInnerHTML={{ __html: html }}
-        />
+        />,
       );
       continue;
     }
@@ -66,7 +66,7 @@ async function renderMarkdown(content: string) {
       elements.push(
         <h2 key={key++} className="mb-3 mt-8 text-xl font-semibold">
           {line.slice(3)}
-        </h2>
+        </h2>,
       );
       i++;
       continue;
@@ -80,15 +80,27 @@ async function renderMarkdown(content: string) {
         i++;
       }
       elements.push(
-        <ul key={key++} className="my-2 list-disc space-y-1 pl-6 text-sm text-muted-foreground">
+        <ul
+          key={key++}
+          className="my-2 list-disc space-y-1 pl-6 text-sm text-muted-foreground"
+        >
           {listItems.map((item, idx) => (
-            <li key={idx} dangerouslySetInnerHTML={{
-              __html: item
-                .replace(/\*\*(.+?)\*\*/g, '<strong class="text-foreground">$1</strong>')
-                .replace(/`(.+?)`/g, '<code class="rounded bg-muted px-1 py-0.5 text-xs">$1</code>')
-            }} />
+            <li
+              key={idx}
+              dangerouslySetInnerHTML={{
+                __html: item
+                  .replace(
+                    /\*\*(.+?)\*\*/g,
+                    '<strong class="text-foreground">$1</strong>',
+                  )
+                  .replace(
+                    /`(.+?)`/g,
+                    '<code class="rounded bg-muted px-1 py-0.5 text-xs">$1</code>',
+                  ),
+              }}
+            />
           ))}
-        </ul>
+        </ul>,
       );
       continue;
     }
@@ -101,10 +113,16 @@ async function renderMarkdown(content: string) {
           className="my-2 text-sm leading-relaxed text-muted-foreground"
           dangerouslySetInnerHTML={{
             __html: line
-              .replace(/\*\*(.+?)\*\*/g, '<strong class="text-foreground">$1</strong>')
-              .replace(/`(.+?)`/g, '<code class="rounded bg-muted px-1 py-0.5 text-xs">$1</code>')
+              .replace(
+                /\*\*(.+?)\*\*/g,
+                '<strong class="text-foreground">$1</strong>',
+              )
+              .replace(
+                /`(.+?)`/g,
+                '<code class="rounded bg-muted px-1 py-0.5 text-xs">$1</code>',
+              ),
           }}
-        />
+        />,
       );
     }
     i++;
