@@ -27,14 +27,14 @@ export function Projects() {
     <section id="projects" className="py-16">
       <div className="flex items-center justify-between">
         <SectionLabel>Projects</SectionLabel>
-        <div role="group" aria-label="Video display mode" className="hidden sm:flex items-center gap-1">
+        <div role="group" aria-label="Video display mode" className="flex items-center gap-1">
           {VIDEO_MODES.map(({ mode, icon: Icon, label }) => (
             <button
               key={mode}
               onClick={() => setVideoMode(mode)}
               aria-label={label}
               aria-pressed={videoMode === mode}
-              className={`p-1 transition-colors ${
+              className={`p-1 transition-colors ${mode === "mobile" ? "hidden sm:block" : ""} ${
                 videoMode === mode
                   ? "text-foreground"
                   : "text-muted-foreground hover:text-foreground"
