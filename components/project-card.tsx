@@ -80,7 +80,18 @@ export function ProjectCard({
     return (
       <Card className="group pt-0 pb-0 transition-all hover:border-primary/50 hover:shadow-lg">
         <Link href={`/project/${project.id}`} className="block">
-          <div className="aspect-video w-full rounded-t-xl bg-muted" />
+          {project.videoDesktop ? (
+            <video
+              src={project.videoDesktop}
+              className="aspect-video w-full rounded-t-xl bg-muted object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
+            />
+          ) : (
+            <div className="aspect-video w-full rounded-t-xl bg-muted" />
+          )}
           <ProjectInfo project={project} />
         </Link>
         <ProjectLinks project={project} />

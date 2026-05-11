@@ -122,6 +122,7 @@ function calculateFatigueScore(input: FatigueInput): number {
     stack: ["TypeScript", "Next.js", "Tailwind CSS"],
     github: "https://github.com/skku-comit/comit.main-frontend.git",
     deploy: "https://comit-main-frontend.vercel.app/",
+    videoDesktop: "/project-videos/comit-promotion/desktop.mp4",
     content: `## 왜 Next.js + Tailwind인가
 
 단순 홍보 페이지지만 동적 애니메이션과 잦은 디자인 수정이 필요했다. 정적 HTML로는 반복적인 CSS 수정이 비효율적. Tailwind의 유틸리티 접근이 디자인 시행착오를 빠르게 반영하는 데 적합했고, 홍보 목적상 SEO도 고려해야 했기 때문에 Next.js 선택.
