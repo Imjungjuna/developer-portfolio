@@ -28,6 +28,7 @@ export const projects: Project[] = [
     github: "https://github.com/Imjungjuna/portfolio-D2C-commerce-site",
     deploy: "https://yundo-ceramics.vercel.app/",
     stack: ["TypeScript", "Next.js", "Tailwind CSS", "Supabase"],
+    videoDesktop: "/project-videos/yundo-ceramics/desktop.mp4",
     content: `## 왜 이 기술들을 선택했는가
 
 - **next-intl**: react-i18next는 클라이언트 중심이라 Server Component에서 번역을 가져오려면 우회가 필요했다. next-intl은 App Router의 \`[locale]\` 세그먼트를 네이티브로 지원해서 선택
@@ -74,6 +75,7 @@ const useHydration = <T,>(useStore: UseBoundStore<StoreApi<T>>) => {
     github: "https://github.com/Imjungjuna/my-personal-tracker",
     deploy: "https://jungjun-personal-tracker.vercel.app/",
     stack: ["TypeScript", "Next.js", "Tailwind CSS", "Supabase"],
+    videoDesktop: "/project-videos/sleep-tracker/desktop.mp4",
     content: `## 왜 이 기술들을 선택했는가
 
 - **Next.js RSC**: 서버에서 직접 Supabase 쿼리 → API Key 클라이언트 비노출, 번들에서 Supabase SDK 제외, 인증→온보딩→데이터 패칭을 하나의 async 함수로 순차 처리
