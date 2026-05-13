@@ -149,12 +149,14 @@ function calculateFatigueScore(input: FatigueInput): number {
     subtitle: "대학교 코딩동아리 활동관리, 웹 프론트엔드 개발 (5인 팀 협업)",
     description:
       "첫 팀 협업 프로젝트. 스키마 설계부터 참여하며 협업 프로세스와 의사결정을 경험",
-    period: "2024.06 ~ 2025.05",
+    period: "2024.06 ~ 2025.04",
     team: "5명 (FE 2, BE 2, INFRA 1)",
-    status: "active",
+    status: "inactive",
     stack: ["TypeScript", "Next.js", "Tailwind CSS", "Spring Boot"],
     github: "https://github.com/skku-comit/comit-website.git",
     deploy: "https://comit-cams.vercel.app/",
+    videoDesktop: "/project-videos/comit-website/desktop.mp4",
+    videoMobile: "/project-videos/comit-website/mobile.mp4",
     content: `## 왜 이 프로젝트가 중요한가
 
 Postman 사용법도 몰랐던 상태에서 시작한 첫 팀 프로젝트. 스키마 설계부터 참여하며 백엔드와의 소통 방식을 배움. 간단해 보이는 프로젝트도 스키마 구조, 일정 조율에서 의사결정 충돌이 일어날 수 있다는 걸 체감. 코드 실력보다 협업 근육을 키운 프로젝트 — GitHub 이슈·PR 템플릿으로 협업 프로세스를 표준화.
