@@ -29,6 +29,7 @@ export const projects: Project[] = [
     deploy: "https://yundo-ceramics.vercel.app/",
     stack: ["TypeScript", "Next.js", "Tailwind CSS", "Supabase"],
     videoDesktop: "/project-videos/yundo-ceramics/desktop.mp4",
+    videoMobile: "/project-videos/yundo-ceramics/mobile.mp4",
     content: `## 왜 이 기술들을 선택했는가
 
 - **next-intl**: react-i18next는 클라이언트 중심이라 Server Component에서 번역을 가져오려면 우회가 필요했다. next-intl은 App Router의 \`[locale]\` 세그먼트를 네이티브로 지원해서 선택
@@ -76,6 +77,7 @@ const useHydration = <T,>(useStore: UseBoundStore<StoreApi<T>>) => {
     deploy: "https://jungjun-personal-tracker.vercel.app/",
     stack: ["TypeScript", "Next.js", "Tailwind CSS", "Supabase"],
     videoDesktop: "/project-videos/sleep-tracker/desktop.mp4",
+    videoMobile: "/project-videos/sleep-tracker/mobile.mp4",
     content: `## 왜 이 기술들을 선택했는가
 
 - **Next.js RSC**: 서버에서 직접 Supabase 쿼리 → API Key 클라이언트 비노출, 번들에서 Supabase SDK 제외, 인증→온보딩→데이터 패칭을 하나의 async 함수로 순차 처리
@@ -125,6 +127,7 @@ function calculateFatigueScore(input: FatigueInput): number {
     github: "https://github.com/skku-comit/comit.main-frontend.git",
     deploy: "https://comit-main-frontend.vercel.app/",
     videoDesktop: "/project-videos/comit-promotion/desktop.mp4",
+    videoMobile: "/project-videos/comit-promotion/mobile.mp4",
     content: `## 왜 Next.js + Tailwind인가
 
 단순 홍보 페이지지만 동적 애니메이션과 잦은 디자인 수정이 필요했다. 정적 HTML로는 반복적인 CSS 수정이 비효율적. Tailwind의 유틸리티 접근이 디자인 시행착오를 빠르게 반영하는 데 적합했고, 홍보 목적상 SEO도 고려해야 했기 때문에 Next.js 선택.

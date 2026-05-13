@@ -109,7 +109,18 @@ export function ProjectCard({
             </Link>
             <ProjectLinks project={project} />
           </div>
-          <div className="hidden sm:block w-1/3 flex-shrink-0 aspect-[9/16] bg-muted rounded-r-xl" />
+          {project.videoMobile ? (
+            <video
+              src={project.videoMobile}
+              className="hidden sm:block w-1/3 flex-shrink-0 aspect-[9/16] bg-muted rounded-r-xl object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
+            />
+          ) : (
+            <div className="hidden sm:block w-1/3 flex-shrink-0 aspect-[9/16] bg-muted rounded-r-xl" />
+          )}
         </div>
       </Card>
     );

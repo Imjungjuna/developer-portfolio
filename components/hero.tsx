@@ -19,7 +19,7 @@ export function Hero() {
       animate={isInView ? "visible" : "hidden"}
     >
       <motion.p variants={fadeUp} className="text-sm text-muted-foreground">
-        사용자와 동료의 경험을 고민합니다.
+        쓰기 편한 제품과 읽기 좋은 코드를 지향합니다.
       </motion.p>
       <motion.h1
         variants={fadeUp}
@@ -31,8 +31,8 @@ export function Hero() {
         variants={fadeUp}
         className="mt-4 max-w-lg text-sm leading-relaxed text-muted-foreground text-balance"
       >
-        좋은 UI는 예쁜 게 아니라, 사용자의 뇌를 쉬게 하는 것입니다. 기술을 쓸
-        수 있는 것보다{" "}
+        좋은 UI는 예쁜 게 아니라, 사용자의 뇌를 쉬게 하는 것입니다. 기술을 쓸 수
+        있는 것보다{" "}
         <span className="font-semibold text-foreground">왜 그 기술인지</span>를
         먼저 묻는 프론트엔드 개발자입니다.
       </motion.p>
