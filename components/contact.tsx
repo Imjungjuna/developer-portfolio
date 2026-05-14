@@ -33,7 +33,7 @@ export function Contact() {
         누구나, 언제든지, 무엇이든 편하게 연락주세요
       </motion.p>
       <motion.div variants={fadeUp}>
-        <Card className="mt-8">
+        <Card className="mt-8 -mx-6 sm:mx-0 rounded-none sm:rounded-xl">
           <CardContent className="grid gap-4 p-6 sm:grid-cols-3">
             {contacts.map((contact) => {
               const Icon = contact.icon;
