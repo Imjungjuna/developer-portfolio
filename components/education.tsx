@@ -23,8 +23,8 @@ export function Education() {
         animate={isInView ? "visible" : "hidden"}
       >
         {education.map((edu) => (
-          <Card key={edu.school}>
-            <CardHeader>
+          <Card key={edu.school} className="-mx-6 sm:mx-0 rounded-none sm:rounded-xl">
+            <CardHeader className="px-6 sm:px-4">
               <div className="flex items-center justify-between">
                 <CardTitle className="text-lg">{edu.school}</CardTitle>
                 <span className="text-sm text-muted-foreground">
@@ -33,7 +33,7 @@ export function Education() {
               </div>
               <p className="text-sm text-muted-foreground">{edu.degree}</p>
             </CardHeader>
-            <CardContent>
+            <CardContent className="px-6 sm:px-4">
               <ul className="list-disc space-y-1 pl-4 text-sm text-muted-foreground">
                 {edu.details.map((detail) => (
                   <li key={detail}>{detail}</li>

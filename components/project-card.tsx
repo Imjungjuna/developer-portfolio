@@ -42,7 +42,7 @@ function ProjectLinks({ project }: { project: Project }) {
 function ProjectInfo({ project }: { project: Project }) {
   return (
     <>
-      <CardHeader className="pt-4">
+      <CardHeader className="pt-4 px-6 sm:px-4">
         <div className="flex items-center justify-between">
           <CardTitle className="text-lg">{project.title}</CardTitle>
           <Badge
@@ -55,7 +55,7 @@ function ProjectInfo({ project }: { project: Project }) {
           {project.period} · {project.team}
         </p>
       </CardHeader>
-      <CardContent>
+      <CardContent className="px-6 sm:px-4">
         <p className="text-sm text-muted-foreground">{project.description}</p>
         <div className="mt-4 flex flex-wrap gap-2">
           {project.stack.map((tech) => (
@@ -78,19 +78,19 @@ export function ProjectCard({
 }) {
   if (videoMode === "desktop") {
     return (
-      <Card className="group pt-0 pb-0 transition-all hover:border-primary/50 hover:shadow-lg">
+      <Card className="group pt-0 pb-0 -mx-6 sm:mx-0 rounded-none sm:rounded-xl transition-all hover:border-primary/50 hover:shadow-lg">
         <Link href={`/project/${project.id}`} className="block">
           {project.videoDesktop ? (
             <video
               src={project.videoDesktop}
-              className="aspect-video w-full rounded-t-xl bg-muted object-cover"
+              className="aspect-video w-full rounded-t-none sm:rounded-t-xl bg-muted object-cover"
               autoPlay
               muted
               loop
               playsInline
             />
           ) : (
-            <div className="aspect-video w-full rounded-t-xl bg-muted" />
+            <div className="aspect-video w-full rounded-t-none sm:rounded-t-xl bg-muted" />
           )}
           <ProjectInfo project={project} />
         </Link>
@@ -101,7 +101,7 @@ export function ProjectCard({
 
   if (videoMode === "mobile") {
     return (
-      <Card className="group overflow-hidden sm:py-0 transition-all hover:border-primary/50 hover:shadow-lg">
+      <Card className="group overflow-hidden sm:py-0 -mx-6 sm:mx-0 rounded-none sm:rounded-xl transition-all hover:border-primary/50 hover:shadow-lg">
         <div className="flex">
           <div className="flex flex-1 flex-col justify-center min-w-0">
             <Link href={`/project/${project.id}`} className="block">
@@ -112,14 +112,14 @@ export function ProjectCard({
           {project.videoMobile ? (
             <video
               src={project.videoMobile}
-              className="hidden sm:block w-1/3 flex-shrink-0 aspect-[9/16] bg-muted rounded-r-xl object-cover"
+              className="hidden sm:block w-1/3 flex-shrink-0 aspect-[9/16] bg-muted rounded-r-none sm:rounded-r-xl object-cover"
               autoPlay
               muted
               loop
               playsInline
             />
           ) : (
-            <div className="hidden sm:block w-1/3 flex-shrink-0 aspect-[9/16] bg-muted rounded-r-xl" />
+            <div className="hidden sm:block w-1/3 flex-shrink-0 aspect-[9/16] bg-muted rounded-r-none sm:rounded-r-xl" />
           )}
         </div>
       </Card>
@@ -128,7 +128,7 @@ export function ProjectCard({
 
   // hidden
   return (
-    <Card className="group transition-all hover:border-primary/50 hover:shadow-lg">
+    <Card className="group -mx-6 sm:mx-0 rounded-none sm:rounded-xl transition-all hover:border-primary/50 hover:shadow-lg">
       <Link href={`/project/${project.id}`} className="block">
         <ProjectInfo project={project} />
       </Link>

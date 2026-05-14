@@ -3,12 +3,12 @@ import type { SkillCategory } from "@/data/skills";
 
 export function SkillCard({ category }: { category: SkillCategory }) {
   return (
-    <Card>
-      <CardHeader>
+    <Card className="-mx-6 md:mx-0 rounded-none md:rounded-xl">
+      <CardHeader className="px-6 md:px-4">
         <CardTitle className="text-base">{category.title}</CardTitle>
         <p className="text-sm text-muted-foreground">{category.subtitle}</p>
       </CardHeader>
-      <CardContent>
+      <CardContent className="px-6 md:px-4">
         <div className="w-fit md:w-full flex flex-row gap-2 sm:gap-3 mx-auto">
           {category.skills.map((skill) => (
             <div
