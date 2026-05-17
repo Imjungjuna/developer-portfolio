@@ -1,9 +1,10 @@
+import Link from "next/link";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { MobileNav } from "@/components/mobile-nav";
 import { Badge } from "@/components/ui/badge";
 
 const navItems = [
-  { label: "About", href: "#hero" },
+  { label: "About", href: "/about" },
   { label: "Education", href: "#education" },
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
@@ -15,9 +16,9 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-sm">
       <div className="mx-auto flex h-14 max-w-4xl items-center justify-between px-6">
         <div className="flex items-center gap-3">
-          <a href="#" className="text-xl" aria-label="홈">
+          <Link href="/" className="text-xl" aria-label="홈">
             🦊
-          </a>
+          </Link>
           <Badge variant="secondary" className="hidden sm:inline-flex gap-1.5 text-xs">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />

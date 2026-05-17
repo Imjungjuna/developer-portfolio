@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/sheet";
 
 const navItems = [
-  { label: "About", href: "#hero" },
+  { label: "About", href: "/about" },
   { label: "Education", href: "#education" },
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
