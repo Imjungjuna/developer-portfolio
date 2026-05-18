@@ -59,7 +59,7 @@ export function About() {
         className="flex flex-col sm:flex-row sm:items-center gap-6 mb-14"
       >
         <Image
-          src="/profile.jpg"
+          src="/profile.png"
           alt="임정준 프로필"
           width={128}
           height={128}
