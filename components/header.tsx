@@ -5,10 +5,10 @@ import { Badge } from "@/components/ui/badge";
 
 const navItems = [
   { label: "About", href: "/about" },
-  { label: "Education", href: "#education" },
-  { label: "Projects", href: "#projects" },
-  { label: "Skills", href: "#skills" },
-  { label: "Contact", href: "#contact" },
+  { label: "Education", href: "/#education" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Skills", href: "/#skills" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export function Header() {
@@ -19,7 +19,10 @@ export function Header() {
           <Link href="/" className="text-xl" aria-label="홈">
             🦊
           </Link>
-          <Badge variant="secondary" className="hidden sm:inline-flex gap-1.5 text-xs">
+          <Badge
+            variant="secondary"
+            className="hidden sm:inline-flex gap-1.5 text-xs"
+          >
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
@@ -27,13 +30,13 @@ export function Header() {
             Available for work
           </Badge>
         </div>
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-6">
           <nav className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="nav-link text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 {item.label}
               </a>

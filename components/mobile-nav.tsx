@@ -10,10 +10,10 @@ import {
 
 const navItems = [
   { label: "About", href: "/about" },
-  { label: "Education", href: "#education" },
-  { label: "Projects", href: "#projects" },
-  { label: "Skills", href: "#skills" },
-  { label: "Contact", href: "#contact" },
+  { label: "Education", href: "/#education" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Skills", href: "/#skills" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export function MobileNav() {
@@ -30,7 +30,7 @@ export function MobileNav() {
             <a
               key={item.href}
               href={item.href}
-              className="text-base font-medium text-foreground hover:text-primary transition-colors"
+              className="nav-link text-base font-medium text-foreground hover:text-primary transition-colors"
             >
               {item.label}
             </a>
