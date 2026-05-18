@@ -41,13 +41,18 @@ export function Hero() {
             backgroundSize: "0% 1px",
             transition: "background-size 0.4s ease",
           }}
-          onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.backgroundSize = "100% 1px")}
-          onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.backgroundSize = "0% 1px")}
+          className="hover:text-foreground"
+          onMouseEnter={(e) =>
+            ((e.currentTarget as HTMLElement).style.backgroundSize = "100% 1px")
+          }
+          onMouseLeave={(e) =>
+            ((e.currentTarget as HTMLElement).style.backgroundSize = "0% 1px")
+          }
         >
-          좋은 UI는 예쁜 게 아니라, 사용자의 뇌를 쉬게 하는 것입니다. 기술을 쓸 수
-          있는 것보다{" "}
-          <span className="font-semibold text-foreground">왜 그 기술인지</span>를
-          먼저 묻는 프론트엔드 개발자입니다.
+          좋은 UI는 예쁜 게 아니라, 사용자의 뇌를 쉬게 하는 것입니다. 기술을 쓸
+          수 있는 것보다{" "}
+          <span className="font-semibold text-foreground">왜 그 기술인지</span>
+          를 먼저 묻는 프론트엔드 개발자입니다.
         </Link>
       </motion.p>
 
