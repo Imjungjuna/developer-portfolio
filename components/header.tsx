@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { MobileNav } from "@/components/mobile-nav";
 import { Badge } from "@/components/ui/badge";
+import { LogoLink } from "@/components/logo-link";
 
 const navItems = [
   { label: "About", href: "/about" },
@@ -16,9 +17,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-sm">
       <div className="mx-auto flex h-14 max-w-4xl items-center justify-between px-6">
         <div className="flex items-center gap-3">
-          <Link href="/" className="text-xl" aria-label="홈">
-            🦊
-          </Link>
+          <LogoLink />
           <Badge
             variant="secondary"
             className="hidden sm:inline-flex gap-1.5 text-xs"
