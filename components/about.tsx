@@ -48,7 +48,7 @@ export function About() {
     <motion.section
       id="about"
       ref={ref}
-      className="py-16 max-w-[700px]"
+      className="py-10 md;py-16 max-w-175"
       variants={staggerContainer}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
@@ -56,14 +56,14 @@ export function About() {
       {/* Profile header */}
       <motion.div
         variants={fadeUp}
-        className="flex flex-col sm:flex-row sm:items-center gap-6 mb-14"
+        className="flex flex-col sm:flex-row sm:items-center gap-8 mb-14"
       >
         <Image
           src="/profile.png"
           alt="임정준 프로필"
           width={128}
           height={128}
-          className="shrink-0 rounded-full object-cover"
+          className="shrink-0 rounded-full object-cover mx-auto sm:mx-0"
         />
         <div className="flex flex-col text-center sm:text-left">
           <p className="text-sm text-muted-foreground">Frontend Developer</p>

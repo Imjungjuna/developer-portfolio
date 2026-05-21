@@ -29,7 +29,7 @@ export function Header() {
             Available for work
           </Badge>
         </div>
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-3">
           <nav className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (
               <a

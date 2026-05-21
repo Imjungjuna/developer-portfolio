@@ -3,6 +3,7 @@
 import { Menu } from "lucide-react";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetTrigger,
   SheetTitle,
@@ -25,15 +26,15 @@ export function MobileNav() {
       </SheetTrigger>
       <SheetContent side="right" className="w-[60vw] sm:max-w-none">
         <SheetTitle className="sr-only">네비게이션</SheetTitle>
-        <nav className="flex flex-col gap-4 px-6 pt-14">
+        <nav className="flex flex-col gap-4 px-6 pt-14 items-start">
           {navItems.map((item) => (
-            <a
+            <SheetClose
               key={item.href}
-              href={item.href}
-              className="nav-link text-base font-medium text-foreground hover:text-primary transition-colors"
+              nativeButton={false}
+              render={<a href={item.href} className="nav-link text-base font-medium text-foreground hover:text-primary transition-colors text-left" />}
             >
               {item.label}
-            </a>
+            </SheetClose>
           ))}
         </nav>
       </SheetContent>
