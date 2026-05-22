@@ -65,6 +65,58 @@ const useHydration = <T,>(useStore: UseBoundStore<StoreApi<T>>) => {
 - **한글 폰트 최적화**: Noto Serif KR은 용량이 커서 \`preload: false\` 설정, \`display: 'swap'\`으로 FOUT를 허용하되 레이아웃 시프트 최소화`,
   },
   {
+    id: "stock-backtester",
+    title: "Stock Backtester",
+    subtitle: "미국 당일 급등주 차트 패턴 분석 및 백테스팅 웹",
+    description:
+      "VCP·컵앤핸들 등 데이트레이딩 패턴을 1분봉 데이터로 백테스팅. 조건별 ON/OFF 토글로 수익률 변화를 실시간 검증.",
+    period: "2026.03 ~ 2026.04",
+    team: "1명",
+    status: "active",
+    stack: [
+      "TypeScript",
+      "Next.js",
+      "SQLite",
+      "TradingView Lightweight Charts",
+      "shadcn/ui",
+      "Tailwind CSS v4",
+    ],
+    deploy: "https://us-stock-trading-backtester.vercel.app/",
+    videoDesktop: "/project-videos/trading-v1/desktop.mp4",
+    content: `## 왜 이 기술들을 선택했는가
+
+- **TradingView Lightweight Charts**: Recharts·D3는 SVG 기반이라 1분봉 수천 개 렌더링 시 버벅임. Lightweight Charts는 캔버스 기반으로 캔들스틱 + 거래량 오버레이를 네이티브 지원, 금융 차트에 특화
+- **better-sqlite3 (WAL 모드)**: 백테스팅은 OHLCV 수천 행을 순차 스캔하는 작업. ORM 추상화 레이어가 성능 병목. WAL 모드로 새 데이터 fetch 중에도 읽기 차단 없음
+
+## 핵심 문제 해결: 토글 가능한 전략 조건 시스템
+
+"조건 A를 끄면 수익률이 올라가는가?"를 검증하려면 매번 코드를 수정해야 했음. 전략 파일이 \`TOGGLEABLE_CONDITIONS\`를 export하면 UI가 자동으로 체크박스를 생성하고, 비활성 조건 목록을 \`options.disabledConditions\`로 전달하는 구조로 해결.
+
+\`\`\`typescript
+// 전략 파일에서 export — UI 코드는 건드리지 않아도 됨
+export const TOGGLEABLE_CONDITIONS = [
+  { id: 'volume_surge', label: '거래량 급증 확인' },
+  { id: 'trend_filter', label: '상위 추세 필터' },
+];
+
+export function run(data: StrategyData, options?: StrategyOptions): BacktestResult {
+  const disabled = new Set(options?.disabledConditions ?? []);
+
+  for (const bar of bars) {
+    if (!disabled.has('volume_surge') && bar.volume < avgVolume * 1.5) continue;
+    if (!disabled.has('trend_filter') && bar.close < sma50) continue;
+    // 진입 신호 생성...
+  }
+}
+\`\`\`
+
+새 전략 추가 시 \`TOGGLEABLE_CONDITIONS\` 배열 하나만 추가하면 체크박스가 자동 생성. 전략 코드와 UI가 완전히 디커플링됨.
+
+## PnL 시각화
+
+매수/매도 신호를 차트 마커로 표시하고, 각 거래의 진입가·청산가·수익률을 테이블로 집계. 고정 자본 $100 기준, 1R 도달 시 50% 부분 익절 시뮬레이션을 포함해 실전에 가까운 결과를 산출.`,
+  },
+  {
     id: "cns-fatigue-tracker",
     title: "CNS Fatigue Tracker",
     subtitle: "운동인을 위한 CNS 피로도 측정·관리, 웹 애플리케이션",
