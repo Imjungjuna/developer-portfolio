@@ -119,7 +119,9 @@ export function ProjectCard({
               playsInline
             />
           ) : (
-            <div className="hidden sm:block w-1/3 flex-shrink-0 aspect-[9/16] bg-muted rounded-r-none sm:rounded-r-xl" />
+            <div className="hidden sm:flex w-1/3 flex-shrink-0 aspect-[9/16] bg-muted rounded-r-none sm:rounded-r-xl items-center justify-center">
+              <span className="text-xs text-muted-foreground">반응형 x</span>
+            </div>
           )}
         </div>
       </Card>
