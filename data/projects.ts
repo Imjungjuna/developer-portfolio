@@ -133,7 +133,7 @@ export function run(data: StrategyData, options?: StrategyOptions): BacktestResu
     content: `## 왜 이 기술들을 선택했는가
 
 - **Next.js RSC**: 서버에서 직접 Supabase 쿼리 → API Key 클라이언트 비노출, 번들에서 Supabase SDK 제외, 인증→온보딩→데이터 패칭을 하나의 async 함수로 순차 처리
-- **Server Actions**: API route 없이 폼 제출→서버 로직→redirect를 하나의 흐름으로. 단, 배열 데이터를 FormData로 다루는 한계를 체감하고 API route 전환 판단 기준을 세움
+- **Server Actions**: API route 없이 폼 제출→서버 로직→redirect를 하나의 흐름으로. 단, 멀티스텝 폼에서 스텝 간 상태 누적을 FormData가 표현하지 못해 React state → hidden input 브릿지 패턴을 사용했고, 이 경험으로 복잡한 상태 구조가 필요한 경우 API Route를 선택하는 기준을 세움.
 - **Supabase (vs Firebase)**: SQL 기반이라 프로필↔운동종목↔일일기록 관계형 모델링이 자연스럽고, Google OAuth 설정이 한 줄로 끝남
 
 ## 도메인 로직 직접 설계: CNS 피로도 알고리즘
