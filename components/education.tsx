@@ -4,7 +4,6 @@ import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import { SectionLabel } from "@/components/section-label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { education } from "@/data/education";
 import { fadeUp } from "@/lib/animations";
 
@@ -23,7 +22,10 @@ export function Education() {
         animate={isInView ? "visible" : "hidden"}
       >
         {education.map((edu) => (
-          <Card key={edu.school} className="-mx-6 sm:mx-0 rounded-none sm:rounded-xl">
+          <Card
+            key={edu.school}
+            className="-mx-6 sm:mx-0 rounded-none sm:rounded-xl"
+          >
             <CardHeader className="px-6 sm:px-4">
               <div className="flex items-center justify-between">
                 <CardTitle className="text-lg">{edu.school}</CardTitle>
@@ -39,13 +41,6 @@ export function Education() {
                   <li key={detail}>{detail}</li>
                 ))}
               </ul>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {edu.tags.map((tag) => (
-                  <Badge key={tag} variant="secondary">
-                    {tag}
-                  </Badge>
-                ))}
-              </div>
             </CardContent>
           </Card>
         ))}
