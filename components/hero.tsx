@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
-import { Mail } from "lucide-react";
+import { Mail, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
@@ -55,6 +55,15 @@ export function Hero() {
           를 먼저 묻는 프론트엔드 개발자입니다.
         </Link>
       </motion.p>
+      <motion.div variants={fadeUp} className="mt-3">
+        <Link
+          href="/about"
+          className="inline-flex items-center gap-0.5 text-sm text-foreground underline underline-offset-2 active:translate-y-px transition-transform"
+        >
+          상세 자기소개 보기
+          <ChevronRight className="h-4 w-4" />
+        </Link>
+      </motion.div>
 
       <motion.dl
         variants={fadeUp}
