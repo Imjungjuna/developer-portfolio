@@ -6,6 +6,7 @@ import { projects } from "@/data/projects";
 import { codeToHtml } from "shiki";
 import { GithubIcon } from "@/components/icons";
 import { ExternalLink } from "lucide-react";
+import Image from "next/image";
 
 export function generateStaticParams() {
   return projects.map((project) => ({ id: project.id }));
@@ -194,7 +195,20 @@ export default async function ProjectPage({
         ))}
       </div>
 
-      <article className="mt-10">{contentElements}</article>
+      <article className="mt-10">
+        {project.image && (
+          <div className="mb-8 flex justify-center">
+            <Image
+              src={project.image}
+              alt={`${project.title} 스크린샷`}
+              width={1280}
+              height={800}
+              className="rounded-lg border w-full"
+            />
+          </div>
+        )}
+        {contentElements}
+      </article>
     </main>
   );
 }

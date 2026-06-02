@@ -123,6 +123,7 @@ const signUpSchema = z.object({
       "Tailwind CSS v4",
     ],
     deploy: "https://us-stock-trading-backtester.vercel.app/",
+    image: "/project-videos/trading-v1/preview.png",
     videoDesktop: "/project-videos/trading-v1/desktop.mp4",
     content: `## 왜 이 기술들을 선택했는가
 
