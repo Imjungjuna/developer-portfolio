@@ -62,9 +62,11 @@ function calculateFatigueScore(input: FatigueInput): number {
 
 ## 인증 흐름과 온보딩 UX
 
-- Supabase Auth + @supabase/ssr로 쿠키 기반 SSR 인증 구현. Server Component에서 \`getClaims()\`로 JWT 로컬 파싱해 네트워크 없이 인증 상태 확인
-- 회원가입 직후 나이·성별·수면패턴·수면 질·낮잠 정보를 5단계 멀티스텝 폼으로 분리 수집하는 온보딩 UX 구현
-- \`profiles.age\` 존재 여부로 온보딩 완료 판단. DAL 함수 \`getUserProfile()\` 내부에서 미완료 시 온보딩 페이지로 리다이렉트하는 가드 구현`,
+Supabase Custom Access Token Hook으로 JWT 발급 시마다 PostgreSQL 함수가 실행되어 \`onboarding_completed\` 클레임을 JWT에 직접 삽입. Supabase 공식 문서의 \`getUser()\` 대신 \`getClaims()\`로 JWT를 로컬 파싱해 매 요청마다 발생하는 네트워크 왕복을 제거하고, middleware에서 인증·온보딩 가드를 모두 처리.
+
+온보딩 완료 후 DB upsert만으로는 기존 JWT가 갱신되지 않아 middleware 가드를 통과하지 못하는 문제를 actions.ts에서 upsert 성공 직후 \`supabase.auth.refreshSession()\`을 명시 호출하는 방식으로 해결. Hook이 새 JWT에 \`onboarding_completed: true\`를 포함시켜 이후 요청부터 즉시 대시보드 접근 가능.
+
+회원가입 직후 나이·성별·수면 패턴·수면 질·낮잠 정보를 5단계 멀티스텝 폼으로 분리 수집하는 온보딩 UX 구현.`,
   },
   {
     id: "cams",
