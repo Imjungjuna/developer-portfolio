@@ -145,7 +145,7 @@ export default async function ProjectPage({
   const contentElements = await renderMarkdown(project.content);
 
   return (
-    <main className="mx-auto w-full max-w-4xl px-6 py-16">
+    <main className="mx-auto w-full max-w-4xl px-6 py-8 sm:py-16">
       <Link
         href="/#projects"
         className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -153,6 +153,19 @@ export default async function ProjectPage({
         <ArrowLeft className="h-4 w-4" />
         Projects
       </Link>
+
+      {project.videoDesktop && (
+        <div className="sm:hidden mt-4 -mx-6">
+          <video
+            src={project.videoDesktop}
+            className="w-full bg-muted object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+          />
+        </div>
+      )}
 
       <h1 className="mt-8 text-2xl font-bold tracking-tight">
         {project.title}
